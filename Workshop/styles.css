@@ -1,3 +1,9 @@
+@keyframes rellenar {
+    to {
+        stroke-dasharray: var(--porcentaje) 100;
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -6,8 +12,10 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    font-family: Nunito Sans, sans-serif;
+    font-family: "Nunito Sans", sans-serif;
     flex-direction: column;
+    min-height: auto;
+    /* evaluar este ultimo, no se si es necesarios */
 
 }
 
@@ -17,10 +25,13 @@ body {
     min-height: 100vh;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 3%;
+    padding: 3px;
     transform-origin: center;
     z-index: 1;
     flex-direction: column;
+    padding-bottom: 200px;
+    justify-content: flex-start;
+    /* space-between; */
 }
 
 
@@ -28,13 +39,13 @@ h1,
 h2,
 p {
     margin: 0%;
-    padding: 0, 0, 0, 0;
-    font-family: Nunito Sans;
+    padding: 0;
+    font-family: "Nunito Sans", sans-serif;
 }
 
 h1 {
     font-size: 280%;
-    font-family: Julius Sans One;
+    font-family: "Julius Sans One", sans-serif;
 }
 
 h2 {
@@ -57,14 +68,12 @@ ul {
 }
 
 footer {
+
     margin-top: auto;
     font-size: 0.8em;
     color: #777;
-    position: static;
-    bottom: 0;
-    width: 70%;
     text-align: center;
-    padding: 0;
+    padding: 10px;
 
 }
 
@@ -75,13 +84,15 @@ footer {
 .rectangulo {
     position: absolute;
     width: 480px;
-    height: 800px;
+    height: 1050px;
+    /* evaluar esto ahorita de ser necesario, borrar */
     bottom: 0;
     top: 50px;
     background-color: #fcd0ff;
-    border-top-left-radius: 200px;
-    border-top-right-radius: 200px;
+    border-top-left-radius: 250px;
+    border-top-right-radius: 250px;
     padding-left: 3px;
+    margin-left: 4px;
     z-index: -2;
 }
 
@@ -93,12 +104,17 @@ img {
     border: 5px solid #f070f7;
     position: absolute;
     z-index: 20;
-    margin: 1.5%;
+    margin: 2.2%;
+    margin-top: 50px;
 }
 
 h3:hover {
     background-color: rgb(90, 2, 102);
     color: white;
+}
+
+a {
+    color: rgb(90, 2, 102);
 }
 
 a:hover {
@@ -111,15 +127,15 @@ a:hover {
     flex-direction: row;
     flex-wrap: wrap;
     align-content: space-evenly;
-    gap: 5%
+    gap: 6%;
+    margin: 10px;
 }
 
 
 .columna1 {
     width: 40%;
-    /* Ajusta según el tamaño deseado */
     position: relative;
-    margin-left: 2%;
+    margin-left: 3%;
     margin-right: 1%;
     top: 500px;
     /* Ajusta este valor para mover hacia abajo */
@@ -134,6 +150,62 @@ a:hover {
     /* Ajusta este valor para mover hacia abajo */
     padding-top: 20px;
 }
+
+i {
+    color: rgb(90, 2, 102);
+    font-size: 20px;
+}
+
+
+.containergrafico {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.porcentajes {
+    position: relative;
+}
+
+.porcentajes span {
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #410238;
+}
+
+circle {
+    display: flex;
+    fill: none;
+    stroke-width: 10;
+    stroke: #7c7b7c;
+    stroke-dasharray: 100 100;
+    transform: rotate(-90deg);
+    transform-origin: 50%;
+
+
+}
+
+circle:nth-child(2) {
+    stroke: rgb(90, 2, 102);
+    stroke-dasharray: var(--porcentaje) 100;
+    /* no me funciona esta animación, pendiente averiguar por que */
+    stroke-linecap: round;
+}
+
+.porcentajes:hover svg {
+    transform: scale(1.2);
+    /* Aumenta tamaño */
+    filter: drop-shadow(0 0 5px rgba(90, 2, 102, 0.8));
+    /* Brillo morado */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
 
 
 @media (max-width: 768px) {
