@@ -1,0 +1,112 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-image: url('https://cssanimation.rocks/images/posts/clocks/ios_clock.svg');
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-attachment: fixed;
+    background-position: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+
+}
+
+.reloj {
+    width: 300%;
+    height: 300%;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.horario,
+.minutero,
+.segundero,
+.centro {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(0deg);
+}
+
+.horario {
+    width: 5px;
+    height: 90px;
+    background-color: rgb(9, 2, 107);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.minutero {
+    width: 4px;
+    height: 110px;
+    background-color: rgb(74, 142, 245);
+    border-radius: 30%;
+    z-index: 2;
+}
+
+.segundero {
+    width: 2px;
+    height: 140px;
+    background-color: red;
+    border-radius: 1px;
+    z-index: 3;
+    /*  esto sirve para decidir el orden en el que se apilan, cual va adelante y cual atras */
+}
+
+.centro {
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 10%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4
+}
+
+@keyframes rotate-seconds {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+@keyframes rotate-minutes {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+@keyframes rotate-hours {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+.segundero {
+    animation: rotate-seconds 60s linear infinite;
+}
+
+.minutero {
+    animation: rotate-minutes 3600s linear infinite;
+}
+
+.horario {
+    animation: rotate-hours 43200s linear infinite;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuela Arias - CV</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Parkinsans:wght@300..800&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Parkinsans:wght@300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="cv">
+
+
+        <div class="contenedor">
+            <div class="rectangulo"></div>
+            <img src="foto.png" alt="foto">
+            <div class="columna1">
+
+                <h3>CONTACTO</h3>
+
+                <i><i class="fa-brands fa-whatsapp"></i></i> 301xxxxxxx <br>
+                <i><i class="fa-solid fa-envelope"></i></i> manuexxxxxxx@gmail.com <br>
+                <i class="fa-brands fa-github"></i><a id="github" href="https://github.com/ManuelaAriasG"
+                    target="_blank"> Mi portafolio de Github</a><br>
+                <i class="fa-brands fa-linkedin-in"></i><a id="linkedin"
+                    href="https://www.linkedin.com/in/manuela-alfonsina-arias-galeano-774035173/" target="_blank"> Mi
+                    perfil de LinkedIn</a><br>
+                <i class="fa-solid fa-location-dot"></i><i></i> Medellín, Colombia
+
+
+
+
+                <h3>HERRAMIENTAS</h3>
+                <div class="containergrafico">
+                    <div class="porcentajes" style="--porcentaje:85" onclick="animateCircle(this)">
+                        <svg width="80" height="80">
+                            <circle r="34" cx="50%" cy="50%" pathlength="100" class="background-circle" />
+                            <circle r="34" cx="50%" cy="50%" pathlength="100" class="progress-circle" />
+                        </svg>
+                        <span>85%</span>
+                        <p>HTML</p>
+                    </div>
+                    <div class="porcentajes" style="--porcentaje:35" onclick="animateCircle(this)">
+                        <svg width="80" height="80">
+                            <circle r="34" cx="50%" cy="50%" pathlength="100" class="background-circle" />
+                            <circle r="34" cx="50%" cy="50%" pathlength="100" class="progress-circle" />
+                        </svg>
+                        <span>35%</span>
+                        <p>CSS</p>
+
+                    </div>
+                    <div class="porcentajes" style="--porcentaje:5" onclick="animateCircle(this)">
+                        <svg width="80" height="80">
+                            <circle r="34" cx="50%" cy="50%" pathlength="100" class="background-circle" />
+                            <circle r="34" cx="50%" cy="50%" pathlength="100" class="progress-circle" />
+                        </svg>
+                        <span>5%</span>
+                        <p>JavaScript</p>
+
+                    </div>
+                </div>
+
+                <h3>IDIOMAS</h3>
+                <ul>
+                    <li>Inglés</li>
+                    <li>Español</li>
+                </ul>
+            </div>
+
+            <div class="sidebar">
+                <h1>Manuela Alfonsina Arias Galeano</h1>
+                <br>
+
+                <h2>DESARROLLADORA FRONTEND</h2>
+                <br>
+                <p class="introduccion">Soy una psicóloga clínica en transición hacia el desarrollo de software, con
+                    un
+                    enfoque en la
+                    creación de soluciones digitales centradas en el usuario. Mi experiencia trabajando con personas
+                    me
+                    ha dado una
+                    comprensión profunda de la conducta humana, lo que aplico al diseñar interfaces intuitivas y
+                    accesibles. Estoy
+                    motivada por el aprendizaje continuo y la posibilidad de construir herramientas tecnológicas que
+                    mejoren la vida de
+                    las personas</p>
+                <br>
+
+                <h3>EXPERIENCIA</h3>
+
+                <p><strong>Psicóloga</strong></p>
+                <br>
+                <p>Salud para el Alma- Gobernación de Antioquia</p>
+                <p>2021-Presente</p>
+                <ul>
+                    <li>Atención psicológica en la línea de emergencias de salud mental del departamento.</li>
+                    <li>Formación del personal de salud respecto a temas de salud mental.</li>
+                </ul>
+
+                <h3>FORMACIÓN</h3>
+                <br>
+                <p><strong>Psicóloga</strong></p><br>
+                <p>Universidad de San Buenaventura</p>
+                <p>2013-2018</p>
+                <br>
+                <p><strong>Desarrollo Frontend</strong></p><br>
+                <p>Universidad EAFIT- NODO</p>
+                <p>2024</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="tarjeta-presentacion">
+        <div class="info">
+            <h1>Manuela Alfonsina Arias Galeano</h1>
+            <p>Desarrollo Frontend</p>
+            <ul class="contact">
+                <li><i><i class="fa-brands fa-whatsapp"></i></i> 301xxxxxxx <br> </li>
+                <li> <i><i class="fa-solid fa-envelope"></i></i> manuexxxxxxx@gmail.com <br> </li>
+            </ul>
+        </div>
+
+
+    </div>
+    <footer>
+        <p>© 2024 Manuela Arias</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

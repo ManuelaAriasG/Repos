@@ -1,0 +1,280 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-family: "Nunito Sans", sans-serif;
+    flex-direction: column;
+    min-height: auto;
+    /* evaluar este ultimo, no se si es necesarios */
+
+}
+
+.cv {
+    display: block;
+    width: 80%;
+    min-height: 100vh;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 3px;
+    transform-origin: center;
+    z-index: 1;
+    flex-direction: column;
+    padding-bottom: 200px;
+    justify-content: flex-start;
+}
+
+
+h1,
+h2,
+p {
+    margin: 0%;
+    padding: 0;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+h1 {
+    font-size: 280%;
+    font-family: "Julius Sans One", sans-serif;
+}
+
+h2 {
+    font-weight: 900;
+
+}
+
+h3 {
+    font-weight: 800;
+    background-color: #ea76f0;
+    border-radius: 10px;
+    width: 100%;
+
+}
+
+
+ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+footer {
+
+    margin-top: auto;
+    font-size: 0.8em;
+    color: #777;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.introduccion {
+    text-align: justify;
+}
+
+.rectangulo {
+    position: absolute;
+    width: 480px;
+    height: 1050px;
+    /* evaluar esto ahorita de ser necesario, borrar */
+    bottom: 0;
+    top: 50px;
+    background-color: #fcd0ff;
+    border-top-left-radius: 250px;
+    border-top-right-radius: 250px;
+    padding-left: 3px;
+    margin-left: 4px;
+    z-index: -2;
+}
+
+img {
+    width: 420px;
+    height: 420px;
+    background-color: #dba6f3;
+    border-radius: 50%;
+    border: 5px solid #f070f7;
+    position: absolute;
+    z-index: 20;
+    margin: 2.2%;
+    margin-top: 50px;
+}
+
+h3:hover {
+    background-color: rgb(90, 2, 102);
+    color: white;
+}
+
+a {
+    color: rgb(90, 2, 102);
+}
+
+a:hover {
+    color: #e01515;
+}
+
+
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    gap: 6%;
+    margin: 10px;
+}
+
+
+.columna1 {
+    width: 40%;
+    position: relative;
+    margin-left: 3%;
+    margin-right: 1%;
+    top: 500px;
+    padding-top: 20px;
+}
+
+.sidebar {
+    width: 45%;
+    position: relative;
+    top: 30px;
+    padding-top: 20px;
+}
+
+i {
+    color: rgb(90, 2, 102);
+    font-size: 20px;
+}
+
+@keyframes animateStroke {
+    from {
+        stroke-dasharray: 0 100;
+    }
+
+    to {
+        stroke-dasharray: var(--porcentaje) 100;
+    }
+}
+
+.containergrafico {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.porcentajes {
+    position: relative;
+}
+
+.porcentajes span {
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #410238;
+}
+
+circle {
+    display: flex;
+    fill: none;
+    stroke-width: 10;
+    stroke: #c5c2c5;
+    stroke-dasharray: 100 100;
+    transform: rotate(-90deg);
+    transform-origin: 50%;
+
+
+}
+
+circle:nth-child(2) {
+    stroke: rgb(90, 2, 102);
+    stroke-dasharray: var(--porcentaje) 100;
+    stroke-linecap: round;
+    animation: animateStroke 3s ease forwards;
+}
+
+.animate .progress-circle {
+    animation: animateStroke 2s ease forwards;
+}
+
+.porcentajes:hover svg {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 5px rgba(90, 2, 102, 0.8));
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* a partir de aca, hago la tarjeta de presentación */
+
+.tarjeta-presentacion {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: none;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background: linear-gradient(to right, #d2a1f5 30%, #fff 70%);
+    align-items: center;
+    height: 180px;
+}
+
+.info h1 {
+    font-size: 18px;
+    margin: 0;
+    color: #000;
+    align-items: baseline;
+}
+
+.info p {
+    font-size: 14px;
+    margin: 5px 0 15px;
+    color: #333;
+}
+
+.contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact li {
+    font-size: 11px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.contact li span {
+    margin-right: 8px;
+}
+
+.logo {
+    text-align: left;
+}
+
+.logo h2 {
+    font-size: 16px;
+    margin: 0;
+    line-height: 1;
+    color: #000;
+    align-items: end;
+}
+
+
+@media (max-width: 768px) {
+    .cv {
+        display: none;
+    }
+
+    .tarjeta-presentacion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}
